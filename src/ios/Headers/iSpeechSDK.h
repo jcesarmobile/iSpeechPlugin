@@ -176,13 +176,15 @@ typedef NSUInteger iSpeechErrorCode;
  */
 @property (nonatomic, copy, readonly) NSString *version;
 
+/** @name Getting the SDK Instance */
+
 /**
- * Set this property to NO if you plan on only using TTS. This should supress the microphone permission. Defaults to YES.
+ * The single instance of the iSpeechSDK class.
+ * 
+ * @return Returns the shared instance of the SDK.
  */
-
-
-
 + (iSpeechSDK *)sharedSDK;
+
 /** @name Getting the Configuration Instance */
 
 /**
@@ -190,9 +192,6 @@ typedef NSUInteger iSpeechErrorCode;
  *
  * @return Returns the configuration proxy.
  */
-
-/** @name Setting up the Audio Session */
-
 - (id <ISConfiguration>)configuration;
 
 /** @name Resetting the SDK */
