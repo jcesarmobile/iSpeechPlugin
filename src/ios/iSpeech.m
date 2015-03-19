@@ -26,7 +26,7 @@
     CDVPluginResult* pluginResult = nil;
     NSString* text = [command.arguments objectAtIndex:0];
     
-    if (text != nil) {
+    if (text != nil && ![text isEqualToString:@""]) {
         
         ISSpeechSynthesis *synthesis = [[ISSpeechSynthesis alloc] initWithText:text];
         /* Configuration changes here: */
