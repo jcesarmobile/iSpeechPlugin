@@ -2,7 +2,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="com.jcesarmobile.iSpeech"
-    version="1.0.2">
+    version="1.0.3">
 
     <name>iSpeech</name>
   <author>jcesarmobile</author>
@@ -45,5 +45,9 @@
         <framework src="CFNetwork.framework" />
 
         <resource-file src="src/ios/iSpeechSDK.bundle" />
+        <preference name="MICROPHONE_USAGE_DESCRIPTION" default=" " />
+        <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
+            <string>$MICROPHONE_USAGE_DESCRIPTION</string>
+        </config-file>
     </platform>
 </plugin>
